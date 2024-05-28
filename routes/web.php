@@ -22,11 +22,11 @@ use App\Http\Controllers\TransaksiController;
 //Route Beranda
 Route::get('/', function () {
     return view('login');
-});   
+});
 
 Route::get('/tentang', function () {
     return view('tentang');
-});    
+});
 
 Route::get('login', [SessionController::class, 'loginclass']);
 Route::post('loginsukses', [SessionController::class, 'login']);
@@ -47,7 +47,7 @@ Route::get('tambah-produk', [ProdukController::class, 'create'])->name('produk.c
 Route::post('produk', [ProdukController::class, 'store'])->name('produk.store');
 Route::get('produk/edit/{id}', [ProdukController::class, 'edit'])->name('produk.edit');
 Route::put('produk/edit/{id}', [ProdukController::class, 'update'])->name('produk.update');
-Route::post('produk/delete/{id}', [ProdukController::class, 'destroy'])->name('produk.delete'); 
+Route::post('produk/delete/{id}', [ProdukController::class, 'destroy'])->name('produk.delete');
 Route::get('/belanja', [ProdukController::class, 'katalog'])->name('produk.belanja');
 
 //Route Keranjang
@@ -57,7 +57,9 @@ Route::post('keranjang/delete/{id}', [KeranjangController::class, 'destroy'])->n
 Route::put('keranjang/update/{id_dt_tr}', [KeranjangController::class, 'update'])->name('keranjang.update');
 
 //Route Pemesanan
-Route::get('pemesanan', [TransaksiController::class, 'index'])->name('transaksi.view'); 
+Route::get('pemesanan', [TransaksiController::class, 'index'])->name('transaksi.view');
 Route::get('pemesanan/add', [TransaksiController::class, 'create'])->name('transaksi.create');
 
 Route::post('pemesanan/add/insert', [TransaksiController::class, 'store'])->name('transaksi.store');
+
+// nambah
