@@ -79,7 +79,7 @@ class ProdukController extends Controller
 
         $data->save();
 
-        return redirect('/produk-view')->with('success', 'Data berhasil disimpan!');
+        return redirect('/kelola-produk')->with('success', 'Data berhasil disimpan!');
     }
 
     public function edit($kodeProduk)
@@ -130,6 +130,6 @@ class ProdukController extends Controller
         $data->delete();
 
 
-        return redirect('/produk-view')->with('success', 'Data berhasil dihapus!');
+        return redirect('/kelola-produk')->with('success', 'Data berhasil dihapus!');
     }
 }
