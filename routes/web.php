@@ -62,4 +62,4 @@ Route::get('pemesanan/add', [TransaksiController::class, 'create'])->name('trans
 
 Route::post('pemesanan/add/insert', [TransaksiController::class, 'store'])->name('transaksi.store');
 
-// halo alan alfaro
+// halo alan alfaro kntol
